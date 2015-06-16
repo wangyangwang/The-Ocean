@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BreathDataProcesser.cs" />
      <Compile Include="Assets\Ocean\Plugins\Exocortex_FFT\Complex.cs" />
      <Compile Include="Assets\Ocean\Plugins\Exocortex_FFT\ComplexArray.cs" />
      <Compile Include="Assets\Ocean\Plugins\Exocortex_FFT\ComplexF.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\Ocean\Scripts\DestroyTimed.cs" />
      <Compile Include="Assets\Ocean\Scripts\Ocean.cs" />
      <Compile Include="Assets\OceanModifier.cs" />
+     <Compile Include="Assets\SensorProcessingMethods.cs" />
      <Compile Include="Assets\Uniduino\Scripts\Arduino.Firmata.cs" />
      <Compile Include="Assets\Uniduino\Scripts\Arduino.cs" />
      <Compile Include="Assets\Uniduino\Scripts\SerialPortProxy.cs" />
@@ -69,6 +71,7 @@
      <Compile Include="Assets\Uniduino\Tutorials\Servo\Servo.cs" />
      <Compile Include="Assets\Uniduino\Tutorials\Servo\ServoSlideControl.cs" />
      <Compile Include="Assets\Uniduino\UniduinoTestPanel\UniduinoTestPanel.cs" />
+     <Compile Include="Assets\sensorInput.cs" />
      <None Include="Assets\Ocean\Ocean Sources\Ocean.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
