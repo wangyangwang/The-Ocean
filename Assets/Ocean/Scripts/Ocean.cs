@@ -304,6 +304,7 @@ public class Ocean : MonoBehaviour
 				float cy = y - Mathf.Floor(tiles * 0.5f);
 				float cx = x - Mathf.Floor(tiles * 0.5f);
 				tile = new GameObject ("WaterTile");
+				tile.AddComponent<TheAmazingWireframeGenerator>();
 				Vector3 pos=tile.transform.position;
 				pos.x = cx * size.x;
 				pos.y = transform.position.y;
@@ -312,7 +313,8 @@ public class Ocean : MonoBehaviour
 				tile.AddComponent (typeof(MeshFilter));
 				tile.AddComponent ("MeshRenderer");
 				tile.renderer.material = material;
-			
+
+
 				//Make child of this object, so we don't clutter up the
 				//scene hierarchy more than necessary.
 				tile.transform.parent = transform;
@@ -320,7 +322,8 @@ public class Ocean : MonoBehaviour
 				//Also we don't want these to be drawn while doing refraction/reflection passes,
 				//so we'll add the to the water layer for easy filtering.
 				tile.layer = LayerMask.NameToLayer ("Water");
-			
+
+
 				// Determine which L0D the tile belongs
 				if(fixedTiles){
 					if(chDist < fTilesDistance)
@@ -330,6 +333,9 @@ public class Ocean : MonoBehaviour
 				}else{
 					tiles_LOD[chDist].Add((tile.GetComponent<MeshFilter>()).mesh);
 				}
+
+//				tile.AddComponent<TheAmazingWireframeGenerator>();
+
 			}
 		}
 
