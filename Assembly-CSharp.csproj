@@ -71,6 +71,13 @@
      <Compile Include="Assets\Uniduino\Tutorials\Servo\Servo.cs" />
      <Compile Include="Assets\Uniduino\Tutorials\Servo\ServoSlideControl.cs" />
      <Compile Include="Assets\Uniduino\UniduinoTestPanel\UniduinoTestPanel.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSC\OSCBundle.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSC\OSCClient.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSC\OSCMessage.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSC\OSCPacket.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSC\OSCServer.cs" />
+     <Compile Include="Assets\UnityOSC\src\OSCHandler.cs" />
+     <Compile Include="Assets\UnityOSC\tests\oscControl.cs" />
      <Compile Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Scripts\TheAmazingWireframeGenerator.cs" />
      <Compile Include="Assets\sensorInput.cs" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\ODL Reflective.shader" />

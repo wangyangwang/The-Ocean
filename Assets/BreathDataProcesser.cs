@@ -3,13 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BreathDataProcesser : MonoBehaviour {
-	
+
+
+	private static BreathDataProcesser singleton = null;
+	public static BreathDataProcesser getSingleton(){
+		return singleton;
+	}
 	private enum States {
 		WAITING_ACTUALLY_SENSOR_INPUT,
 		READY,
 		RUNNING
 	}
-	
+
+
+	public bool isInhalingTest;
 	public delegate void del();
 	public static event del breathSensorReady;
 	public static event del deepBreathHappened;
@@ -68,6 +75,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	//=====================================================================================================================
 	
 	void Start () {
+		singleton = this;
 		processedDataList = new List<float>();
 		runningAvgList = new List<float>();
 		
@@ -77,6 +85,11 @@ public class BreathDataProcesser : MonoBehaviour {
 	//=====================================================================================================================
 	
 	void FixedUpdate () {
+
+
+		if (Input.GetKeyDown("space")){
+			isInhalingTest = !isInhalingTest;
+		}
 
 
 		Debug.Log(isInhaling);
