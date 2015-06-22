@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/sensorInput.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ocean/Scripts/Ocean.cs">
     <Files>
+      <File FileName="Assets/Ocean/Scripts/Ocean.cs" Line="337" Column="57" />
       <File FileName="Assets/sensorInput.cs" Line="18" Column="33" />
       <File FileName="Assets/BreathDataProcesser.cs" Line="1" Column="1" />
     </Files>

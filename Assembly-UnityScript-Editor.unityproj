@@ -204,20 +204,20 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.5/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="VacuumShaders.TheAmazingWireframeShader">
- <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/The Amazing Wireframe Shader/Scripts/VacuumShaders.TheAmazingWireframeShader.dll</HintPath>
- </Reference>
- <Reference Include="VacuumShaders.TheAmazingWireframeShaderVC">
- <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/The Amazing Wireframe Shader/Editor/VacuumShaders.TheAmazingWireframeShaderVC.dll</HintPath>
- </Reference>
  <Reference Include="VacuumShaders">
  <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/Editor/VacuumShaders.dll</HintPath>
  </Reference>
  <Reference Include="VacuumShaders.TheAmazingWireframeShader_Editor">
  <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/The Amazing Wireframe Shader/Editor/VacuumShaders.TheAmazingWireframeShader_Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="VacuumShaders.TheAmazingWireframeShaderVC">
+ <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/The Amazing Wireframe Shader/Editor/VacuumShaders.TheAmazingWireframeShaderVC.dll</HintPath>
+ </Reference>
+ <Reference Include="VacuumShaders.TheAmazingWireframeShader">
+ <HintPath>/Users/yang/Documents/TheOcean_Hacky/Assets/VacuumShaders/The Amazing Wireframe Shader/Scripts/VacuumShaders.TheAmazingWireframeShader.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
