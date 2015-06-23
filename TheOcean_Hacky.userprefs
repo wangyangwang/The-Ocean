@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/OSCListener.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/OceanModifier.cs">
     <Files>
-      <File FileName="Assets/OceanModifier.cs" Line="48" Column="5" />
+      <File FileName="Assets/OceanModifier.cs" Line="1" Column="1" />
       <File FileName="Assets/Ocean/Scripts/Ocean.cs" Line="1" Column="1" />
       <File FileName="Assets/Ocean/Editor/OceanGeneratorInspector.cs" Line="1" Column="1" />
-      <File FileName="Assets/UnityOSC/tests/oscControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/UnityOSC/src/OSC/OSCClient.cs" Line="1" Column="1" />
       <File FileName="Assets/BreathDataProcesser.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/OSCListener.js" Line="12" Column="25" />
+      <File FileName="Assets/scripts/OSCListener.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

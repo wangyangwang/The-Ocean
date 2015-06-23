@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class BreathDataProcesser : MonoBehaviour {
 
 
+	public GameObject oscObject;
+
+
 	private static BreathDataProcesser singleton = null;
 	public static BreathDataProcesser getSingleton(){
 		return singleton;
@@ -78,6 +81,7 @@ public class BreathDataProcesser : MonoBehaviour {
 		singleton = this;
 		processedDataList = new List<float>();
 		runningAvgList = new List<float>();
+
 		
 		deepBreathThreshold = deepBreathLength * 50;
 	}
@@ -86,11 +90,13 @@ public class BreathDataProcesser : MonoBehaviour {
 	
 	void FixedUpdate () {
 
-//		Debug.Log(isInhaling);
+		Debug.Log(isInhaling);
 		stateController();
 		if(isStable){
-			float rawData = sensorInput.getSingleton().rawBreathingValue;
-//			float rawData = 
+//			float rawData = sensorInput.getSingleton().rawBreathingValue;
+			float rawData = oscObject.GetComponent<oscReceive>().getData();
+//			rawData = oscObject.GetComponent<os
+//			float rawData = oscObject.GetComponent<oscReceiver>().counter;
 			float processedData = 0.0f;
 			processedData = SensorProcessingMethods.smoothDataAddToList(processedDataList, rawData, dampRate ,dataSetSize);
 			float tempSum = 0.0f;

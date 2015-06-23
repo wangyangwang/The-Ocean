@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\oscReceiver.js" />
      <Compile Include="Assets\scripts\OSCListener.js" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\ODL Reflective.shader" />
      <None Include="Assets\Ocean\Ocean Sources\Ocean.shader" />

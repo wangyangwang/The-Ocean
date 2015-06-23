@@ -38,7 +38,7 @@ public class OceanModifier : MonoBehaviour {
 	void Update () {
 
 
-		if(BreathDataProcesser.getSingleton().isInhalingTest){
+		if(BreathDataProcesser.isInhaling){
 			oceanScale += incrementN*Time.deltaTime;
 			waveSpeed += incrementN*Time.deltaTime/500;
 			vol += incrementN * Time.deltaTime/100;

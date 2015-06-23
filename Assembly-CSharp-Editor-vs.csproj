@@ -49,7 +49,6 @@
      <Compile Include="Assets\Ocean\Editor\OceanGeneratorInspector.cs" />
      <Compile Include="Assets\Uniduino\Editor\UniduinoAutorun.cs" />
      <Compile Include="Assets\Uniduino\Editor\UniduinoSetup.cs" />
-     <Compile Include="Assets\UnityOSC\src\Editor\OSCHelper.cs" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\ODL Reflective.shader" />
      <None Include="Assets\Ocean\Ocean Sources\Ocean.shader" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\Unlit Color.shader" />
