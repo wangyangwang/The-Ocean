@@ -46,9 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UnityOSC\docs\doxygen\html\jquery.js" />
-     <Compile Include="Assets\UnityOSC\docs\doxygen\html\navtree.js" />
-     <Compile Include="Assets\UnityOSC\docs\doxygen\html\resize.js" />
+     <Compile Include="Assets\oscReceiver.js" />
+     <Compile Include="Assets\scripts\OSCListener.js" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\ODL Reflective.shader" />
      <None Include="Assets\Ocean\Ocean Sources\Ocean.shader" />
      <None Include="Assets\VacuumShaders\The Amazing Wireframe Shader\Shaders\Vertex Color\Unlit Color.shader" />

@@ -86,16 +86,11 @@ public class BreathDataProcesser : MonoBehaviour {
 	
 	void FixedUpdate () {
 
-
-		if (Input.GetKeyDown("space")){
-			isInhalingTest = !isInhalingTest;
-		}
-
-
-		Debug.Log(isInhaling);
+//		Debug.Log(isInhaling);
 		stateController();
 		if(isStable){
 			float rawData = sensorInput.getSingleton().rawBreathingValue;
+//			float rawData = 
 			float processedData = 0.0f;
 			processedData = SensorProcessingMethods.smoothDataAddToList(processedDataList, rawData, dampRate ,dataSetSize);
 			float tempSum = 0.0f;

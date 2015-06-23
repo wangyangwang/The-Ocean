@@ -201,6 +201,9 @@
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/yang/Documents/TheOcean_Hacky/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/yang/Documents/TheOcean_Hacky/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
  </Reference>

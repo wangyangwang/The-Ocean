@@ -4,18 +4,26 @@ using System.Collections;
 public class OceanModifier : MonoBehaviour {
 
 
-	float normalOceanScale = 5.0f;
-	float normalWaveSpeed = 0.5f;
+	float normalOceanScale = 6.0f;
+	float normalWaveSpeed = 0.7f;
 
 	float maxWaveSpeed = 3.0f;
-	float maxOceanScale = 15.0f;
+	float maxOceanScale = 12.0f;
 
 	float oceanScale;//1-10
 	float waveSpeed; //0-3
 	float windPower = 1.0f;//0-1
 
 
-	float incrementN = 2.0f;
+	float normalVol = 0.7f;
+	float vol;
+
+
+	float maxVol = 1.5f;
+
+
+
+	float incrementN = 3.0f;
 
 
 	public Ocean myOcean;
@@ -33,22 +41,32 @@ public class OceanModifier : MonoBehaviour {
 		if(BreathDataProcesser.getSingleton().isInhalingTest){
 			oceanScale += incrementN*Time.deltaTime;
 			waveSpeed += incrementN*Time.deltaTime/500;
+			vol += incrementN * Time.deltaTime/100;
 		}else{
 			if(oceanScale > normalOceanScale){
-				oceanScale -= incrementN*Time.deltaTime;
+				oceanScale -= incrementN*Time.deltaTime/2;
 			}
 			if(waveSpeed > normalWaveSpeed){
-				waveSpeed -= incrementN*Time.deltaTime/1000;
+				waveSpeed -= incrementN*Time.deltaTime/900;
+			}
+			if(vol > normalVol){
+				vol -= incrementN * Time.deltaTime/100;
+				Debug.Log(incrementN * Time.deltaTime/100);
 			}
 		}
 
-		if(oceanScale>maxOceanScale)oceanScale=maxOceanScale;
-		if(waveSpeed>maxWaveSpeed)waveSpeed=maxWaveSpeed;
+		if(oceanScale>maxOceanScale)oceanScale = maxOceanScale;
+		if(waveSpeed>maxWaveSpeed)waveSpeed = maxWaveSpeed;
+		if(vol>maxVol)vol = maxVol;
 
 		modifyOcean();
-
+		modifyVol();
 	}
 
+	public void modifyVol(){
+//		AudioListener.volume = vol;
+//		Debug.Log(AudioListener.volume);
+	}
 
 
 	public void modifyOcean(){

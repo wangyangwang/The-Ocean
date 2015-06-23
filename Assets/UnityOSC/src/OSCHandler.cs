@@ -93,12 +93,12 @@ public class OSCHandler : MonoBehaviour
 	{
         //Initialize OSC clients (transmitters)
         //Example:		
-        //CreateClient("SuperCollider", IPAddress.Parse("127.0.0.1"), 5555);
+		//CreateClient("zzwyServer", IPAddress.Parse("127.0.0.1"), 12345);
 
         //Initialize OSC servers (listeners)
         //Example:
 
-        //CreateServer("AndroidPhone", 6666);
+        CreateServer("zzwyServer", 12345);
 	}
 	
 	#region Properties
@@ -274,6 +274,9 @@ public class OSCHandler : MonoBehaviour
 	/// <summary>
 	/// Updates clients and servers logs.
 	/// </summary>
+
+
+
 	public void UpdateLogs()
 	{
 		foreach(KeyValuePair<string,ServerLog> pair in _servers)
@@ -311,7 +314,6 @@ public class OSCHandler : MonoBehaviour
 			}
 		}
 	}
-	
 	/// <summary>
 	/// Converts a collection of object values to a concatenated string.
 	/// </summary>
