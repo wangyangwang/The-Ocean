@@ -51,7 +51,7 @@ public class OceanModifier : MonoBehaviour {
 			}
 			if(vol > normalVol){
 				vol -= incrementN * Time.deltaTime/100;
-				Debug.Log(incrementN * Time.deltaTime/100);
+//				Debug.Log(incrementN * Time.deltaTime/100);
 			}
 		}
 

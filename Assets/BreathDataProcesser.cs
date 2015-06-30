@@ -28,7 +28,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	States STATE;
 	bool isStable = false;
 	bool firstLogOut = false, thirdLogOut = false; //log control, make sure log will only be printed once
-	float waitingDataTime = 8.0f;
+	float waitingDataTime = 0.0f;
 	
 	//data process
 	List<float> processedDataList;
@@ -43,7 +43,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	int decreaseCounter = 0;
 	int increaseCounter = 0;
 	//how many times we ignore before swtich states between increasing and decrease
-	int falutTolerantThreshold = 5; 
+	int falutTolerantThreshold = 4; 
 	int increaseFaultTolerantCounter = 0;
 	int decreaseFaultTolerantCounter = 0;
 	int exhaleDetermineThreshold = 10;
@@ -63,7 +63,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	
 	//deep breath
 	public int deepBreathCounter = 0;
-	float deepBreathLength = 3.0f; //seconds
+	float deepBreathLength = 2.0f; //seconds
 	float deepBreathThreshold;
 	float timeStamp4DeepBreath = 0.0f;
 	bool deepBreathInCoolDown = false;
@@ -95,6 +95,7 @@ public class BreathDataProcesser : MonoBehaviour {
 		if(isStable){
 //			float rawData = sensorInput.getSingleton().rawBreathingValue;
 			float rawData = oscObject.GetComponent<oscReceive>().getData();
+			Debug.Log(rawData);
 //			rawData = oscObject.GetComponent<os
 //			float rawData = oscObject.GetComponent<oscReceiver>().counter;
 			float processedData = 0.0f;

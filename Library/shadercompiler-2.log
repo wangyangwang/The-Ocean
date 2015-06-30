@@ -55,3 +55,6 @@ Cmd: compileSnippet
   api=0 type=0 insize=2051 outsize=733 kw=V_WIRE_ANTIALIASING_OFF V_WIRE_IN_TANGENT ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=2051 outsize=6 kw=V_WIRE_ANTIALIASING_OFF V_WIRE_IN_TANGENT ok=1
+End of pipe
+
+Quitting shader compiler process
