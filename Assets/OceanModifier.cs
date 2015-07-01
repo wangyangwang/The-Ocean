@@ -4,7 +4,7 @@ using System.Collections;
 public class OceanModifier : MonoBehaviour {
 
 
-	float normalOceanScale = 6.0f;
+	float normalOceanScale = 3.0f;
 	float normalWaveSpeed = 0.7f;
 
 	float maxWaveSpeed = 3.0f;
