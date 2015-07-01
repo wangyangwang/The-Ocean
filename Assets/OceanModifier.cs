@@ -15,8 +15,8 @@ public class OceanModifier : MonoBehaviour {
 	float windPower = 1.0f;//0-1
 
 
-	float normalVol = 0.7f;
-	float vol;
+	float normalVol = 0.2f;
+	float vol = 1.0f;
 
 
 	float maxVol = 1.5f;
@@ -41,16 +41,16 @@ public class OceanModifier : MonoBehaviour {
 		if(BreathDataProcesser.isInhaling){
 			oceanScale += incrementN*Time.deltaTime;
 			waveSpeed += incrementN*Time.deltaTime/500;
-			vol += incrementN * Time.deltaTime/100;
+			vol += incrementN * Time.deltaTime/10;
 		}else{
 			if(oceanScale > normalOceanScale){
-				oceanScale -= incrementN*Time.deltaTime/2;
+				oceanScale -= incrementN*Time.deltaTime/4;
 			}
 			if(waveSpeed > normalWaveSpeed){
 				waveSpeed -= incrementN*Time.deltaTime/900;
 			}
 			if(vol > normalVol){
-				vol -= incrementN * Time.deltaTime/100;
+				vol -= incrementN * Time.deltaTime/10;
 //				Debug.Log(incrementN * Time.deltaTime/100);
 			}
 		}
@@ -64,14 +64,14 @@ public class OceanModifier : MonoBehaviour {
 	}
 
 	public void modifyVol(){
-//		AudioListener.volume = vol;
-//		Debug.Log(AudioListener.volume);
+		AudioListener.volume = vol;
+		Debug.Log(AudioListener.volume);
 	}
 
 
 	public void modifyOcean(){
 		myOcean.scale = oceanScale;
-		myOcean.speed = waveSpeed;
+//		myOcean.speed = waveSpeed;
 //		myOcean.humidity = windPower;
 	}
 }

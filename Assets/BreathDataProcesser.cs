@@ -6,6 +6,7 @@ public class BreathDataProcesser : MonoBehaviour {
 
 
 	public GameObject oscObject;
+	public bool inhaling = false;
 
 
 	private static BreathDataProcesser singleton = null;
@@ -43,7 +44,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	int decreaseCounter = 0;
 	int increaseCounter = 0;
 	//how many times we ignore before swtich states between increasing and decrease
-	int falutTolerantThreshold = 4; 
+	int falutTolerantThreshold = 3; 
 	int increaseFaultTolerantCounter = 0;
 	int decreaseFaultTolerantCounter = 0;
 	int exhaleDetermineThreshold = 10;
@@ -89,7 +90,7 @@ public class BreathDataProcesser : MonoBehaviour {
 	//=====================================================================================================================
 	
 	void FixedUpdate () {
-
+		inhaling = isInhaling;
 		Debug.Log(isInhaling);
 		stateController();
 		if(isStable){
@@ -117,7 +118,7 @@ public class BreathDataProcesser : MonoBehaviour {
 					SensorProcessingMethods.drawCurves(runningAvgList);
 				}
 			}
-			if (runningAvgList.Count > 500) {
+			if (runningAvgList.Count > 200) {
 				runningAvgList.RemoveAt(0);
 			}
 			if(runningAvgList.Count > 3){
