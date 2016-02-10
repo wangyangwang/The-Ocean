@@ -20,7 +20,7 @@ public class BoyancyCS : MonoBehaviour
 	void Start ()
 	{
 
-		rigidbody.centerOfMass = new Vector3 (0.0f, -1f, 0.0f);
+		GetComponent<Rigidbody>().centerOfMass = new Vector3 (0.0f, -1f, 0.0f);
 	
 		Vector3 bounds = GetComponent<BoxCollider> ().size;
 		float length = bounds.z;
@@ -72,7 +72,7 @@ public class BoyancyCS : MonoBehaviour
 		foreach (Vector3 blob in blobs) {
 			
 			Vector3 wpos = transform.TransformPoint (blob);
-			float damp = rigidbody.GetPointVelocity (wpos).y;
+			float damp = GetComponent<Rigidbody>().GetPointVelocity (wpos).y;
 			Vector3 sinkForce = new Vector3(0,0,0);
 			
 			float buyancy = mag * (wpos.y);
@@ -84,7 +84,7 @@ public class BoyancyCS : MonoBehaviour
 				buyancy = Mathf.Max(buyancy, -3) + sinkForces[index++] ;
 			}
 			
-			rigidbody.AddForceAtPosition (-Vector3.up * (buyancy + dampCoeff * damp), wpos);
+			GetComponent<Rigidbody>().AddForceAtPosition (-Vector3.up * (buyancy + dampCoeff * damp), wpos);
 			//rigidbody.velocity = rigidbody.velocity * Time.deltaTime *10f;
 		}
 	}

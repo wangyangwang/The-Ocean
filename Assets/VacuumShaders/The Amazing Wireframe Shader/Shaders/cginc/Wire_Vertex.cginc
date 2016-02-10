@@ -1,3 +1,6 @@
+// Upgrade NOTE: unity_Scale shader variable was removed; replaced 'unity_Scale.w' with '1.0'
+// Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
+
 #ifndef VACUUM_WIRE_VERTEX_CGINC
 #define VACUUM_WIRE_VERTEX_CGINC
 
@@ -98,7 +101,7 @@ vOutput vert(vInput v)
 	#endif
 
 	#if defined(V_WIRE_REFLECTION)
-		half3 worldN = mul((half3x3)_Object2World, v.normal * unity_Scale.w);
+		half3 worldN = mul((half3x3)_Object2World, v.normal * 1.0);
 
 		half3 viewDir = _WorldSpaceCameraPos.xyz - mul(_Object2World, v.vertex).xyz;
 		
@@ -123,7 +126,7 @@ vOutput vert(vInput v)
 	#endif
 
 	#if defined(UNITY_PASS_FORWARDBASE) || defined(V_WIRE_IBL_ON)
-		o.normal = mul((half3x3)_Object2World, v.normal * unity_Scale.w);
+		o.normal = mul((half3x3)_Object2World, v.normal * 1.0);
 	#endif
 	 
 
@@ -200,7 +203,7 @@ fixed4 frag(vOutput i) : COLOR
 	#endif
 
 	#if defined(LIGHTMAP_ON) && !defined(PASS_FORWARD_ADD)
-		fixed4 lmtex = tex2D(unity_Lightmap, i.uv.zw);
+		fixed4 lmtex = UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv.zw);
 		fixed3 diff = WIRE_DecodeLightmap (lmtex);	
 	#endif
 

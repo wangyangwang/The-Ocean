@@ -311,8 +311,8 @@ public class Ocean : MonoBehaviour
 				pos.z = cy * size.z;
 				tile.transform.position=pos;
 				tile.AddComponent (typeof(MeshFilter));
-				tile.AddComponent ("MeshRenderer");
-				tile.renderer.material = material;
+				tile.AddComponent <MeshRenderer>();
+				tile.GetComponent<Renderer>().material = material;
 
 
 				//Make child of this object, so we don't clutter up the
@@ -725,9 +725,9 @@ public class Ocean : MonoBehaviour
 		//covering the watertiles so we get a decent bounding box, then
 		//scale all the vertices to 0 to make it invisible.
 		gameObject.AddComponent (typeof(MeshRenderer));
-		renderer.material.renderQueue = 1001;
-		renderer.receiveShadows = false;
-		renderer.castShadows = false;
+		GetComponent<Renderer>().material.renderQueue = 1001;
+		GetComponent<Renderer>().receiveShadows = false;
+		GetComponent<Renderer>().castShadows = false;
 		
 		Mesh m = new Mesh ();
 		
@@ -936,11 +936,11 @@ public class Ocean : MonoBehaviour
 			if (!reflectionCamera) // catch both not-in-dictionary and in-dictionary-but-deleted-GO
 			{
 				GameObject go = new GameObject( "Water Refl Camera id" + GetInstanceID() + " for " + currentCamera.GetInstanceID(), typeof(Camera), typeof(Skybox) );
-				reflectionCamera = go.camera;
+				reflectionCamera = go.GetComponent<Camera>();
 				reflectionCamera.enabled = false;
 				reflectionCamera.transform.position = transform.position;
 				reflectionCamera.transform.rotation = transform.rotation;
-				reflectionCamera.gameObject.AddComponent("FlareLayer");
+				reflectionCamera.gameObject.AddComponent<FlareLayer>();
 				go.hideFlags = HideFlags.HideAndDontSave;
 				m_ReflectionCameras[currentCamera] = reflectionCamera;
 			}
@@ -965,11 +965,11 @@ public class Ocean : MonoBehaviour
 			if (!refractionCamera) // catch both not-in-dictionary and in-dictionary-but-deleted-GO
 			{
 				GameObject go = new GameObject( "Water Refr Camera id" + GetInstanceID() + " for " + currentCamera.GetInstanceID(), typeof(Camera), typeof(Skybox) );
-				refractionCamera = go.camera;
+				refractionCamera = go.GetComponent<Camera>();
 				refractionCamera.enabled = false;
 				refractionCamera.transform.position = transform.position;
 				refractionCamera.transform.rotation = transform.rotation;
-				refractionCamera.gameObject.AddComponent("FlareLayer");
+				refractionCamera.gameObject.AddComponent<FlareLayer>();
 				go.hideFlags = HideFlags.HideAndDontSave;
 				m_RefractionCameras[currentCamera] = refractionCamera;
 			}

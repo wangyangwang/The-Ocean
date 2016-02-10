@@ -40,7 +40,7 @@ public class OceanGeneratorInspector : Editor
 		string logoPath = Path.Combine(pluginPath, "Editor");
 		logoPath = Path.Combine(logoPath, "OceanBanner.png");
 		
-		logo = Resources.LoadAssetAtPath<Texture2D>(logoPath);
+		logo = AssetDatabase.LoadAssetAtPath<Texture2D>(logoPath);
 		
 		if (null == logo)
 			Debug.LogError("null == logo");
@@ -48,7 +48,7 @@ public class OceanGeneratorInspector : Editor
 		string backPath = Path.Combine(pluginPath, "Editor");
 		backPath = Path.Combine(backPath, "Background.png");
 		
-		back = Resources.LoadAssetAtPath<Texture2D>(backPath);
+		back = AssetDatabase.LoadAssetAtPath<Texture2D>(backPath);
 		
 		if (null == back)
 			Debug.LogError("null == back");

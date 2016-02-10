@@ -1,3 +1,6 @@
+// Upgrade NOTE: commented out 'half4 unity_LightmapST', a built-in variable
+// Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
+
 #ifndef VACUUM_WIRE_VARIABLES_CGINC
 #define VACUUM_WIRE_VARIABLES_CGINC
 
@@ -23,8 +26,8 @@ fixed4 _Color;
 #endif
 
 #if defined(LIGHTMAP_ON) && !defined(V_WIRE_SURFACE)
-	half4 unity_LightmapST;
-	sampler2D unity_Lightmap;				
+	// half4 unity_LightmapST;
+	// sampler2D unity_Lightmap;				
 #endif
 
 #if defined(UNITY_PASS_FORWARDBASE) && !defined(V_WIRE_SURFACE)

@@ -1,3 +1,5 @@
+// Upgrade NOTE: unity_Scale shader variable was removed; replaced 'unity_Scale.w' with '1.0'
+
 #ifndef VACUUM_WIRE_FUNCTIONS_CGINC
 #define VACUUM_WIRE_FUNCTIONS_CGINC
 
@@ -19,7 +21,7 @@ inline float3 V_WIRE_WorldSpaceViewDir( in float4 v )
 
 inline half3 V_WIRE_ObjViewDir ( half3 vertexPos )
 {				
-	half3 objSpaceCameraPos = mul(_World2Object, half4(_WorldSpaceCameraPos.xyz, 1)).xyz * unity_Scale.w;
+	half3 objSpaceCameraPos = mul(_World2Object, half4(_WorldSpaceCameraPos.xyz, 1)).xyz * 1.0;
 				
 	return normalize(objSpaceCameraPos - vertexPos);
 }

@@ -10,7 +10,7 @@ public class oscReceive : MonoBehaviour {
 
 
 	private string UDPHost = "127.0.0.1";
-	private int listenerPort = 2000;
+	private int listenerPort = 7771;
 	private int broadcastPort = 57131;
 	private Osc oscHandler;
 
@@ -27,7 +27,7 @@ public class oscReceive : MonoBehaviour {
 		oscHandler = GetComponent<Osc>();
 		oscHandler.init(udp);
 
-		oscHandler.SetAddressHandler("/breathdata",getInput);
+		oscHandler.SetAddressHandler("/meditation",getInput);
 	}
 
 
@@ -37,7 +37,6 @@ public class oscReceive : MonoBehaviour {
 	public void getInput(OscMessage oscMessage) {
 		Osc.OscMessageToString(oscMessage);
 		inputData =  Convert.ToInt32(oscMessage.Values[0]); // Int32.Parse(oscMessage.Values[0]);
-//		Debug.Log(inputData);
 	}
 
 	public int getData(){
